@@ -24,7 +24,7 @@ module Ancestry
           open_ul -= diff
         end
         prev_depth = curr_depth
-        html += block_given? ? yield(node) : "<a href=#>#{node.id}</a>"
+        html += block_given? ? yield(node) : "<a href=#>#{node.name}</a>"
       end
       html += '</li></ul>' * open_ul.abs
       html += '</div>'
